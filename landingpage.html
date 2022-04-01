@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #top_line{
+            background-color: rgb(240, 237, 237);
+            text-align: center;
+            width: 100%;
+            height: 40px;
+
+        }
+        #top_line>p{
+            cursor: pointer;
+        }
+        
+        #mid_line{
+            display: flex;
+            width: 100%;
+            height: 70px;
+            border: 1px solid black;
+        }
+        .logo{
+            /* border: 1px solid black; */
+            margin-top: 0;
+            width: 10%;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            cursor: pointer;
+            /* font-size: l; */
+            margin-right: 2%;
+        }
+       
+        .logo_img{
+            width: 6%;
+            height: 4%;
+            /* border: 1px solid black; */
+            margin-top: 6px;
+        }
+        .search_bar{
+            border: 1px solid black;
+            width: 35%;
+            height: 45px;
+            border-radius: 5px;
+            margin-top: 15px;
+            margin-left: 15px;
+            margin-right: 400px;
+        }
+        #bott_line{
+           display: flex;
+        }
+        .search_bar>div{
+            display: flex;
+        }
+        input{
+            width: 430px;
+            height: 40px;
+            border: 0;
+            border-color: white;
+            
+        }
+        input::placeholder{
+            font-family:'Gotham 4r',helvetica,arial,sans-serif;
+            font-size: larger;
+        
+        }
+        .tasks{
+            width: 20%;
+            height: 55px;
+            justify-content: space-between;
+            display: flex;
+            cursor: pointer;
+            
+            /* margin-top: 14px; */
+        }
+        .tasks>div{
+            width: 25%;
+            text-align: center;
+            margin-top: 0px;
+            
+        }
+        .task_img{
+            width: 50%;
+            margin-bottom: 0px;
+            margin-top: 5px;
+        }
+        .tasks>p{
+            margin-top: 0px;
+        }
+        #bott_line{
+            display: flex;
+            width: 100%;
+            height: 35px;
+            border: 1px solid black;
+        }
+        #bott_line>div{
+            /* border: 1px solid black; */
+            display: flex;
+            /* width: 15%; */
+        }
+        #bott_line>p{
+            margin: 0px;
+        }
+        #bott_line1{
+            width: 12%;
+            cursor: pointer;
+        }
+        #bott_line2{
+            width: 15%;
+            cursor: pointer;
+        }
+        #bott_line3{
+            width: 22%;
+            margin-left: 700px;
+            cursor: pointer;
+            
+        }
+        .tinyimg{
+            width: 15px;
+            height: 15px;
+            margin-top: 10px;
+            margin-right: 4px;
+        }
+        .tiny1{
+            width: 20px;
+            height: 15px;
+            margin-top: 10px;
+            margin-right: 4px;
+            margin-left: 4px;
+        }
+        .tiny2{
+            width: 28px;
+            height: 28px;
+            margin-top: 5px;
+            margin-right: 4px;
+        }
+        /* .dropbtn {
+        /* padding: 16px; */
+        /* font-size: 16px;
+        border: none;
+        } */ 
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        width: 160px;
+        margin-top: 32px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        /* z-index: 2; */
+        }
+        .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .acc-name{
+            margin-top: 0px;
+        }
+        .total-amount{
+            margin-top: 0px;
+        }
+        .checkout{
+            margin-top: 0px;
+        }
+        #land_top{
+            display: flex;
+            background-color: black;
+            color: white;
+            width: 100%;
+            height: 3%;
+            margin-top: 20px;
+            /* align-items: center; */
+        }
+        #land_top>h1{
+            font-size: xx-large;
+            margin-top: 0.7%;
+        }
+        #land_top>b{
+            margin-left: 0.5%;
+            margin-top: 1.5%;
+        }
+        #land_top>a{
+            margin-top: 1.5%;
+            margin-left: 0.5%;
+            color: white;
+        }
+        #land_mid{
+            margin-top: 3%;
+            width: 100%;
+            /* border: 1px solid red; */
+        }
+        .font{
+            font-size: 45px;
+            margin-left: 20%;
+            margin-bottom: 10px;
+            
+        }
+        #offer_img{
+            width: 75%;
+            /* margin: auto; */
+            margin-top: 3%;
+            /* border: 1px solid black; */
+            position: relative;
+            /* background-image: "https://media.kohlsimg.com/is/image/kohls/hp2-d-20220330-easter-main"; */
+        }
+        .img1{
+            width: 380px;
+            height: 350px;
+            /* border: 1px solid red; */
+            position: relative;
+            top: 30px;
+            left: 130px;
+            cursor: pointer;
+        }
+        .img2{
+            width: 1300px;
+            height: 400px;
+            /* border: 1px solid black; */
+            position: absolute;
+            /* left: 0; */
+            margin-left: 0;
+            /* size: 300px; */
+            cursor: pointer;
+        }
+        .c1{
+            position: absolute;
+            top: 90px;
+            left: 200px;
+            /* bottom: 500px; */
+            font-size: x-large;
+            cursor: pointer;
+        }
+        .c2{
+            position:absolute;
+            top: 120px;
+            left: 250px;
+            /* bottom: 500px; */
+            font-size: x-large;
+            cursor: pointer;
+        }
+        .c3{
+            position:absolute;
+            top: 150px;
+            left: 210px;
+            /* bottom: 500px; */
+            font-size: 60px;
+            cursor: pointer;
+        }
+        .c4{
+            position:absolute;
+            top: 220px;
+            left: 245px;
+            /* bottom: 500px; */
+            font-size: larger;
+            cursor: pointer;
+        }
+        .c5{
+            position:absolute;
+            top: 245px;
+            left: 210px;
+            /* bottom: 500px; */
+            font-size: x-large;
+            cursor: pointer;
+        }
+        .c6{
+            position:absolute;
+            top: 280px;
+            left: 195px;
+            /* bottom: 500px; */
+            font-size: larger;
+            cursor: pointer;
+        }
+        #land_opt{
+            display: flex;
+            /* border: 1px solid green; */
+            justify-content: space-between;
+            margin-top: 5%;
+        }
+        #land_opt1{
+            border: 4px solid rgb(233, 64, 129);
+            width: 110px;
+            height: 110px;
+            border-radius: 100px;
+            margin: auto;
+            padding-top: 15px;
+            padding: 5px;
+            cursor: pointer;
+        }
+        #land_opt2{
+            border: 4px solid rgb(233, 64, 129);
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            margin: auto;
+            padding: 20px;
+            padding-top: 50px;
+            padding-right: 40px;
+            padding-left: 30px;
+            cursor: pointer;
+        }
+        .size1{
+            font-size: 45px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 12px;
+            
+        }
+        .size2{
+            font-size: x-large;
+            margin: auto;
+            margin-left: 9px;
+            margin-bottom: 2px;
+        }
+        .size3{
+            font-size: x-large;
+            margin: auto;
+            margin-top: 100px;
+        }
+        #land_mid_off{
+            border: 1px solid black;
+            width: 100%;
+            display: flex;
+            margin: auto;
+            margin-top: 5%;
+            
+        }
+        #land_mid_off>div{
+            display: flex;
+            font-size: 40px;
+            margin: auto;
+        }
+        #land_mid_opt{
+            width: 70%;
+            /* border: 1px solid black; */
+            display: flex;
+            margin: auto;
+            margin-bottom: 100px;
+        }
+        .L1{
+            width: 13%;
+            /* border: 1px solid black; */
+            margin: auto;
+            text-align: center;
+            font-size: larger;
+            margin-top: 2%;
+            cursor: pointer;
+        }
+        .L1>img{
+            width: 120px;
+            height: 120px;
+            margin-bottom: 4%;
+        }
+        .L1>img:hover{
+            
+            width: 130px;
+            height: 130px;
+            margin-bottom: 4%;
+         
+        }
+        .font2{
+            font-size: 45px;
+            margin-left: 35%;
+            margin-bottom: 10px;
+            margin-top: 100px;
+        }
+        #leggings{
+            width: 83%;
+            /* border: 1px solid black; */
+            display: flex;
+            margin: auto;
+            margin-top: 50px;
+        }
+        #L2{
+            width: 25%;
+            /* border: 1px solid black; */
+            margin: auto;
+            position: relative;
+        }
+        #L2>img{
+            width: 250px;
+            height: 380px;
+            cursor: pointer;
+        }
+        .l2_text1{
+            position: absolute;
+            left: 120px;
+            top: 205px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .l2_text2{
+            position: absolute;
+            left: 120px;
+            top: 245px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .l2_text3{
+            position: absolute;
+            left: 120px;
+            top: 265px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .l2_text4{
+            position: absolute;
+            left: 25px;
+            top: 150px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .l2_text5{
+            position: absolute;
+            left: 25px;
+            top: 170px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .l2_text6{
+            position: absolute;
+            left: 25px;
+            top: 215px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .l2_text7{
+            position: absolute;
+            left: 25px;
+            top: 235px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .l2_text8{
+            position: absolute;
+            left: 25px;
+            top: 255px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .l2_text9{
+            position: absolute;
+            left: 130px;
+            top: 185px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .l2_text10{
+            position: absolute;
+            left: 130px;
+            top: 205px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .l2_text11{
+            position: absolute;
+            left: 130px;
+            top: 245px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .l2_text12{
+            position: absolute;
+            left: 130px;
+            top: 265px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .l2_text13{
+            position: absolute;
+            left: 25px;
+            top: 155px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .l2_text14{
+            position: absolute;
+            left: 25px;
+            top: 175px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .l2_text15{
+            position: absolute;
+            left: 25px;
+            top: 210px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .l2_text16{
+            position: absolute;
+            left: 25px;
+            top: 227px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .l2_text17{
+            position: absolute;
+            left: 25px;
+            top: 245px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #brand{
+            /* border: 1px solid black; */
+            width: 83%;
+            margin: auto;
+            display: flex;
+            margin-bottom: 100px;
+            
+        }
+        #brand1>img{
+            width: 100px;
+            height: 100px;
+            margin-right: 100px;
+            margin-left: 75px;
+        }
+        #land_mid_opt2{
+            width: 90%;
+            /* border: 1px solid black; */
+            display: flex;
+            margin: auto;
+            margin-bottom: 100px;
+        }
+        .font3{
+            font-size: 40px;
+            margin-left: 26%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div id="top_line">
+                <p>
+                    <b>Free Shipping</b> with <b>$50</b> purchase <a href="">details</a>
+                    <b>Fast & Free</b> store pickup! <a href="">details</a>
+                    <b>Take 20% off</b> online with code EXTRA20 <a href="">details</a>
+                </p>
+            </div>
+    
+            <div id="mid_line">
+    
+                <div class="logo">
+                    <h1 style="margin-left: 10px;">KOHL’S</h1>
+                </div>
+                <div class="search_bar">
+                    <div>
+                        <img class="logo_img" src="https://img.icons8.com/ios/2x/search.png" alt="">
+                        <div>
+                            <input type="text" placeholder="Hi, what are you looking for today?">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="tasks">
+                    <div id="task1">
+                        <div><img class="task_img" src="https://img.icons8.com/ios/2x/test-account.png" alt="">
+                        <p class="acc-name">Account</p></div>
+                    </div>
+                    <div id="task2">
+                        <div><img class="task_img" src="https://img.icons8.com/ios/2x/shopping-cart.png" alt="">
+                        <p class="total-amount">$0.00</p></div>
+                    </div>
+                    <div id="task3">
+                        <div><img class="task_img" src="https://img.icons8.com/ios/2x/circled-chevron-right.png" alt="">
+                        <p class="checkout">Checkout</p></div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="bott_line">
+                <div id="bott_line1" class="dropdown">
+                    <img class="tiny1" src="https://img.icons8.com/ios/2x/menu.png">
+                    <p class="dropbtn">Shop by Category</p>
+                    <div class="dropdown-content">
+                        <a href="">Easter</a>
+                        <a href="">Mother's day</a>
+                        <a href="">For the Home</a>
+                        <a href="">Women</a>
+                        <a href="">Juniors</a>
+                        <a href="">Men</a>
+                        <a href="">Kids & Toys</a>
+                        <a href="">Baby</a>
+                        <a href="">Bed & Bath</a>
+                        <a href="">Outdoor Living</a>
+                        <a href="">Furniture & Decor</a>
+                        <a href="">Active & Wellness</a>
+                        <a href="">New & Trending</a>
+                    </div>
+                </div>
+                <div id="bott_line2" style="border-left: 1px solid grey;">
+                    <img class="tiny2" src="https://image.shutterstock.com/image-vector/black-star-vector-icon-260nw-221796499.jpg">
+                    <p>My Store: Select Store</p>
+                </div>
+                <div id="bott_line3">
+                    <img class="tinyimg" src="https://img.icons8.com/ios/2x/us-dollar-circled--v2.png">
+                    <p style="margin-right:15px;">Kohl's Coupons</p>
+                    <img class="tinyimg" src="https://img.icons8.com/ios/2x/help.png">
+                    <p>Help</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="land_top">
+        <img style="width:4%; height: 4%; margin-right: 15px; margin-left:30%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhxAh58UQfb2AWhE5Zx_KKcETkEVtpn98dQg&usqp=CAU">
+        <h1>FREE SHIPPING</h1>
+        <b>with a $35 purchase</b>
+        <a href="">details</a>
+    </div>
+
+
+    <div id="land_mid">
+        <b class="font">Find everything you need to bring on spring.</b>
+        <div id="offer_img">
+    
+            <img class="img2" src="https://media.kohlsimg.com/is/image/kohls/hp2-d-20220330-easter-main" alt="">
+            <img class="img1" src="https://media.kohlsimg.com/is/content/kohls/hp2-d-20220330-easter-gpo-bkg" />
+            <!-- <div id="imgtext"> -->
+                <div class="c1"><b>Friends & Family Savings</b></div>
+                <div class="c2"><b>Take an extra</b></div>
+                <div class="c3"><b>20 %Off</b></div>
+                <div class="c4"><b>In store & online.</b></div>
+                <div class="c5">Promo Code: SHOP20</div>
+                <div class="c6">Ends April 3 <a style="color:black" href="">details & exclutions</a></div>
+            <!-- </div> -->
+        </div>
+
+        <div id="land_opt">
+           <div id="land_opt1">
+               <b class="size1">$10</b>
+               <b class="size2">& Under</b>
+           </div>
+           <div id="land_opt1">
+               <b class="size1">$20</b>
+               <b class="size2">& Under</b>
+           </div>
+           <div id="land_opt2">
+               <b class="size3">Home</b>
+           </div>
+           <div id="land_opt2">
+               <b class="size3">Women</b>
+           </div>
+           <div id="land_opt2">
+               <b class="size3">Men</b>
+           </div>
+           <div id="land_opt2">
+               <b class="size3">Kids</b>
+           </div>
+           <div id="land_opt2">
+               <b class="size3">Active</b>
+           </div>
+           <div id="land_opt2">
+               <b class="size3">Shoes</b>
+           </div>
+        </div>
+
+        <div id="land_mid_off">
+            <div>
+                <p>SEPHORA </p><b style="margin-top: 40px">+ KOHL'S</b><a style="color:black; font-size: 28px; margin-top: 50px; margin-left: 10px;" href="">shop now</a>
+            </div>
+        </div>
+        <div id="land_mid_opt">
+
+            <div class="L1">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220303-sephora-bubbles-01" />
+                <b>Makeup</b>
+            </div>
+            <div class="L1">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220303-sephora-bubbles-02" />
+                <b>Skincare</b>
+            </div>
+            <div class="L1">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220303-sephora-bubbles-03" />
+                <b>Hair</b>
+            </div>
+            <div class="L1">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220303-sephora-bubbles-04" />
+                <b>Fragrance</b>
+            </div>
+            <div class="L1">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220303-sephora-bubbles-05" />
+                <b>Tools & Brushes</b>
+            </div>
+            <div class="L1">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220303-sephora-bubbles-06" />
+                <b>Bath & Body</b>
+            </div>
+        </div>
+        
+        <div>
+            <b class="font2">The leggings you'll love.</b>
+        </div>
+        <div id="leggings">
+            <div id="L2">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-d-20220330-leggings-01" />
+                <div class="l2_text1"><b>One Tight</b></div>
+                <div class="l2_text2">Moisture-</div>
+                <div class="l2_text3">wicking fabric</div>
+            </div>
+            <div id="L2">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-d-20220330-leggings-02" />
+                <div class="l2_text4" ><b>heat Gear</b></div>
+                <div class="l2_text5"><b>Legging</b></div>
+                <div class="l2_text6">Hign-rise,</div>
+                <div class="l2_text7">no-slip</div>
+                <div class="l2_text8">waistband</div>
+            </div>
+            <div id="L2">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-d-20220330-leggings-03" />
+                <div class="l2_text9"><b>Affirmation</b></div>
+                <div class="l2_text10"><b>Legging</b></div>
+                <div class="l2_text11">Buttery</div>
+                <div class="l2_text12">soft touch</div>
+            </div>
+            <div id="L2">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-d-20220330-leggings-04" />
+                <div class="l2_text13"><b>Essential</b></div>
+                <div class="l2_text14"><b>Legging</b></div>
+                <div class="l2_text15">Supports more</div>
+                <div class="l2_text16">sustainable</div>
+                <div class="l2_text17">cotton farming</div>
+            </div>
+        </div>
+
+        <div id="brand">
+           <div id="brand1">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReYIOsRphkan6-apwz3zMznN-AQyqk_I1B0EY2unJhXMZAzrNNQuOjgJ2yoEAZCTnNb_o&usqp=CAU" />
+           </div>
+           <div id="brand1">
+               <img src="data:image/png;base64,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" />
+           </div>
+           <div id="brand1">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaN1SbHx6DVfPL-wS80ZX73RyfwNvM8Ow96J-15IpIq5r9McbSx0VI_17c6-LvOoITJB4&usqp=CAU"/>
+           </div>
+           <div id="brand1">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjxGLq8IXDDS0zasUyo1195O5GPU-hciVf2x4gFOZz5CQZkGXcqMb0n1sa0fGGYnFBihk&usqp=CAU" />
+           </div>
+        </div>
+
+        <div>
+            <b class="font3">What are you shoopping for today?</b>
+        </div>
+
+        <div id="land_mid_opt2">
+
+            <div class="L1">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220321-shoprail_01" />
+                <b>Kids</b>
+            </div>
+            <div class="L1">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220321-shoprail_02" />
+                <b>Women</b>
+            </div>
+            <div class="L1">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220321-shoprail_03" />
+                <b>Men</b>
+            </div>
+            <div class="L1">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220321-shoprail_04" />
+                <b>Active</b>
+            </div>
+            <div class="L1">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220321-shoprail_05" />
+                <b>Shoes</b>
+            </div>
+            <div class="L1">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220321-shoprail_06" />
+                <b>Accessories</b>
+            </div>
+            <div class="L1">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220321-shoprail_07" />
+                <b>Home</b>
+            </div>
+            <div class="L1">
+                <img src="https://media.kohlsimg.com/is/image/kohls/hp2-dm-20220321-shoprail_08" />
+                <b>Decor</b>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
