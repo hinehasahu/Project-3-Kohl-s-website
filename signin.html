@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #signin_cont{
+            width: 60%;
+            height: 500px;
+            /* border: 1px solid black; */
+            margin: auto;
+            display: flex;
+        }
+        #left_side{
+            border-right: 1px solid black;
+            width: 50%;
+            margin: auto;
+        }
+        #left_side>div{
+            width: 75%;
+            /* border: 1px solid black; */
+            margin-left: 10%;
+            padding-left: 25px;
+        }
+        #Email, #Pass{
+            width: 80%;
+            height: 35px;
+            margin-top: 2%;
+            margin-bottom: 3%;
+        }
+        #right_side{
+            /* border: 1px solid black; */
+            width: 40%;
+            margin: auto;
+            margin-top: 55px;
+        }
+        #Submit1{
+            padding: 3%;
+            background-color: rgb(11, 187, 11);
+            color: white;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            border: 1px solid white;
+            cursor: pointer;
+            margin: 0;
+            margin-top: 3%;
+            /* padding: 1.5%; */
+            padding-left: 32%;
+            padding-right: 32%;
+        }
+        .acc-img{
+            width: 30px;
+            height: 30px;
+        }
+        #Submit2{
+            margin: 0;
+            padding: 2.5%;
+            padding-left: 20%;
+            padding-right: 20%;
+            background-color: rgb(7, 182, 7);
+            color: white;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            border: 1px solid white;
+            cursor: pointer;
+            margin-top: 3%;
+        }
+        .padd{
+            margin-bottom: 3%;
+        }
+    </style>
+</head>
+<body>
+    <div id="signin_cont">
+
+        <div id="left_side">
+
+            <div>
+                <h2>Sign In</h2>
+                <p>Sign in to your Kohls.com account to shop, checkout or track your order.</p>
+
+                <form action="">
+                    <b>Email Address</b>
+                    <input id="Email" type="email">
+                    <b>Password</b>
+                    <input id="Pass" type="password">
+                    <div><b for=""><input class="check" type="checkbox" > keep me signed in </b></div>
+                    <p style="color: grey; font-size:small">Check this bo to stay sign in on this device.</p>
+                    <input id="Submit1" type="Submit" value="Sign In">
+                </form>
+            </div>
+
+        </div>
+
+        <div id="right_side">
+
+            <h2>Create Account</h2>
+            <p>With a Kohls.com account, enjoy exclusive,
+                benefits that make shopping faster and easier!</p>
+            <div class="padd">
+                <img class="acc-img" src="https://img.icons8.com/pastel-glyph/2x/express-shopping.png" />
+                <b>Enjoy Express Checkout</b>
+            </div>
+            <div class="padd">
+                <img class="acc-img" src="https://img.icons8.com/external-flaticons-flat-flat-icons/2x/external-rewards-home-based-business-flaticons-flat-flat-icons-2.png" />
+                <b>See your Kohl's Rewards</b>
+            </div>
+            <div class="padd">
+                <img class="acc-img" src="https://img.icons8.com/ios-filled/2x/bank-card-back-side.png" />
+                <b>Print Kohl's Cash</b>
+            </div>
+            <div class="padd">
+                <img class="acc-img" src="https://img.icons8.com/ios-filled/2x/delivery.png" />
+                <b>Track order easily</b>
+            </div>
+            <button id="Submit2" onclick="window.location.href='signUp.html'">Create Account</button>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+    document.querySelector("form").addEventListener("submit", login);
+
+    function login(event){
+        
+        let email = document.getElementById("email").value;
+        let pass = document.getElementById("pass").value;
+
+        console.log(email,pass);
+        let log_info = JSON.parse(localStorage.getItem("userdatabase"));
+        let ccc = false;
+        for(var i=0; i<log_info.length; i++){
+            
+            if(log_info[i].Email == email && log_info[i].Password == pass){
+                ccc = true;
+                break;
+            }
+        }
+
+        if(ccc){
+            alert("Login Successful");
+            window.location.href = "landingpage.html";
+        }
+        else{
+            alert("Wrong credentials");
+        }
+    }
+
+    
+</script>
