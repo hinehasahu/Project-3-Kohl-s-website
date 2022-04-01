@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #container {
+            background-color: rgb(240, 237, 237);
+            height:850px;
+            width: 100%;
+        }
+        #box1,#box2,#box3 {
+            width: 80%;
+            /* border: 1px solid black; */
+            margin: auto;
+            padding: 2%;
+            
+            
+        }
+        #box1 {
+            border-bottom: 1px solid rgb(189, 188, 188);
+            display:flex;
+            /* border: 1px solid black; */
+        }
+        #box1-divs,#box2-divs{
+            /* border: 1px solid black; */
+            display: flex;
+            width: 50%;
+            /* margin-right: 100px; */
+            
+
+        }
+        #box1-divs{
+            border-right: 1px solid grey;
+        }
+        #box1-divs>div{
+            margin: 2px;
+            margin-right: 40px;
+            /* margin-top: 10px; */
+            cursor: pointer;
+            
+            
+        }
+        #box2-divs>div{
+            margin: 2px;
+            margin-right: 40px;
+            /* margin-top: 10px; */
+            cursor: pointer;
+        }
+        #box2-divs p{
+            /* border: 1px solid black; */
+            width: 180px;
+            margin-bottom: 4px;
+            margin-top: 5px;
+        }
+        .btn{
+            background-color: black;
+            padding: 3%;
+            color: white;
+            border-radius: 3px;
+        }
+        #box2 {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgb(189, 188, 188);
+        }
+        .part1 {
+            width: 16%;
+            /* border: 1px solid black; */
+        }
+        #box3 {
+            text-align: center;
+        }
+        #box3>p{
+            margin: 0;
+            font-size: small;
+        }
+        .icon{
+            width:40px;
+            height: 40px;
+            /* border: 1px solid black; */
+            margin-top: 20px;
+            
+        }
+        .text{
+            /* border: 1px solid black; */
+            width: 66px;
+            margin-right: 50px;
+        }
+        .text2{
+            width: 66px;
+            margin-right: 50px;
+            margin-left: 5%;
+        }
+        .QR{
+            width: 66px;
+            margin-right: 50px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <div id="box1">
+
+            <div id="box1-divs">
+
+                <div class="text"><h5>CONNECT WITH US</h5></div>
+                <div><img class="icon" src="https://img.icons8.com/glyph-neue/2x/facebook-new.png" ></div>
+                <div><img class="icon" src="https://img.icons8.com/windows/2x/twitter.png" ></div>
+                <div><img class="icon" src="https://img.icons8.com/ios-glyphs/2x/pinterest.png" ></div>
+                <div><img class="icon" src="https://img.icons8.com/ios-glyphs/2x/instagram-new.png" ></div>
+                <div><img class="icon" src="https://img.icons8.com/ios-glyphs/344/youtube-play.png" ></div>
+
+            </div>
+
+            <div id="box2-divs">
+                <div class="text2"><h3>Get our App</h3></div>
+                <div><img class="QR" src="https://img.icons8.com/external-kmg-design-detailed-outline-kmg-design/2x/external-qr-code-protection-and-security-kmg-design-detailed-outline-kmg-design.png" /></div>
+                <div>
+                    <p>scan the code to download the Kohl's App today.</p>
+                    <button class="btn">Learn more</button>
+                </div>
+            </div>
+
+        </div>
+        <div id="box2">
+            <div class="part1">
+                <h5>CUSTOMER SERVICE</h5>
+                <p>Contact Us</p>
+                <p>Shipping</p>
+                <p>Returns</p>
+                <p>Rebates</p>
+                <p>Recalls</p>
+                <p>Product Guides</p>
+                <p>Kohl's Blog</p>
+                <p>Kohl's Cash</p>
+            </div>
+            <div class="part1">
+                <h5>SHOP KOHLS</h5>
+                <p>Get 15% off when you sign up for our emails</p>
+                <p>Site Map</p>
+                <p>Store Locator</p>
+                <p>Gift Cards</p>
+                <p>Kohl's Coupons</p>
+            </div>
+            <div class="part1">
+                <h5>MY ACCOUNT</h5>
+                <p>My Account</p>
+                <p>Update Password</p>
+                <p>Order Status</p>
+                <p>Rewards</p>
+                <p>Gift Card Balance & Kohl's Cash Balance</p>
+            </div>
+            <div class="part1">
+                <h5>KOHL'S CARD</h5>
+                <p>Benefits</p>
+                <p>Pay & Manage Card</p>
+                <p>Apply for a Kohl's Card</p>
+                <p>See if you prequalify</p>
+            </div>
+            <div class="part1">
+                <h5>ABOUT KOHL'S</h5>
+                <p>Our Websites</p>
+                <p>Community</p>
+                <p>Diversity & Inclusion</p>
+                <p>Sustainability</p>
+                <p>Careers</p>
+                <p>Apply for seasonal Jobs</p>
+                <p>Associate Services</p>
+                <p>Invesstor Relations</p>
+                <p>Affiliate Program</p>
+                <p>Advertise with Us</p>
+            </div>
+        </div>
+        <div id="box3">
+            <p>© 2022 Kohl’s, Inc.</p>
+            <p>KOHL’S® and Kohl’s brand names are trademarks owned by KIN, Inc.</p>
+            <p>All rights reserved.</p><br>
+            <p>Android, Google Play and the Google Play logo are trademarks of Google Inc. App Store is a service mark of Apple Inc.</p><br>
+            <p><b><a href="">Legal Notices,</a><a href="">Privacy Policy,</a><a href="">California Privacy Policy,</a><a href="">CA-Do not Sell my Personal Information,</a><a href="">About our Ads,</a><a href="">California Transparency in Supply Chains Act.</a></b></p>
+        </div>
+    </div>
+
+</body>
+</html>
