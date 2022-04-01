@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #create_acc{
+            width: 60%;
+            height: 500px;
+            /* border: 1px solid red; */
+            margin: auto;
+        }
+        /* #box1{
+            border: 1px solid black;
+        } */
+        #box2{
+            border-bottom: 1px solid grey;
+            display: flex;
+        }
+        #box2>div{
+            width: 38%;
+            /* border: 1px solid red; */
+            padding-bottom: 3%;
+        }
+        #name1,#name2,#email,#pass{
+            padding: 4%;
+            padding-right:35%;
+            margin-top: 2%;
+            margin-bottom: 5%;
+        }
+        #check{
+            /* padding: 10%; */
+            margin-top: 2%;
+            font-size: smaller;
+            color: rgb(87, 86, 86);
+        }
+        .small{
+            font-size: smaller;
+            color: grey;
+        }
+        #signbutt{
+            margin:auto;
+            /* border: 1px solid black; */
+        }
+        #submit{
+            margin: 3%;
+            padding: 1.5%;
+            padding-left: 6%;
+            padding-right: 6%;
+            background-color: rgb(7, 182, 7);
+            color: white;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            border: 1px solid white;
+            cursor: pointer;
+            
+        }
+        #submit:hover{
+            background-color: rgb(88, 235, 88);
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="create_acc">
+
+        <div id="box1">
+            <h2>Create Account</h2>
+            <p>By creating an account, you agree to Kohl's <a href="">Security & Privacy Policy</a> & <a href="">Legal Notice</a></p>
+        </div>
+        <div id="box2">
+            <div>
+                <form action="">
+                    <b>First Name</b>
+                    <input id="name1" type="text">
+            
+                    <b>Email Address</b>
+                    <input id="email" type="email" placeholder="name@mail.com">
+                    
+                    <b id="check" for=""><input type="checkbox" > keep me signed in </b>
+                    <p class="small">Check this box to stay signed in on this device.</p>
+                    <!-- <input  type="submit" value="Create Account"> -->
+                </form>
+            </div>
+            <div>
+                <b>Last Name</b>
+                <input id="name2" type="text">
+                <b>Password</b>
+                <input id="pass" type="password" placeholder="Enter password">
+            </div>
+        </div>
+        <div id="signbutt">
+            <button id="submit" onclick="signup()">Create Account</button>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+    //ocument.querySelector("form").addEventListener("submit", signup)
+    var data = JSON.parse(localStorage.getItem("userdatabase"))|| [] ;
+    function signup(event){
+        // event.preventDefault(event);
+
+        var name1 = document.querySelector("#name1").value;
+        var name2 = document.querySelector("#name2").value;
+        var email = document.querySelector("#email").value;
+        var pass = document.querySelector("#pass").value;
+
+        if(name1 != "" && name2 != "" && email != "" && pass != ""){
+            let userdata = {
+                Name1: name1,
+                Name2: name2,
+                Email: email,
+                Password: pass,
+            }
+            
+            data.push(userdata);
+            localStorage.setItem("userdatabase", JSON.stringify(data));
+            window.location.href = "header.html";
+        }
+        else{
+            alert("Please fill all the sections");
+            
+        }
+
+    }
+
+    console.log(data);
+
+
+</script>
